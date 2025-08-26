@@ -1,9 +1,6 @@
 name: 03 Sacloud Apprun Actions
 
 on:
-  workflow_dispatch:
-
-on:
   push:
     branches:
       - main
@@ -26,7 +23,7 @@ jobs:
           container-registry: ${{ secrets.REGISTRY }}
           container-registry-user: ${{ secrets.REGISTRY_USER }}
           container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          port: '8080'
+          port: "8080"
           # SQLite + Litestream を使う場合は以下も指定
           object-storage-bucket: ${{ secrets.STORAGE_BUCKET_NAME }}
           object-storage-access-key: ${{ secrets.STORAGE_ACCESS_KEY }}
